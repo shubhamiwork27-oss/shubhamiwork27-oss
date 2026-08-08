@@ -1,0 +1,113 @@
+<svg viewBox="0 0 800 306" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            @keyframes fadeUp { 0% { opacity: 0; transform: translateY(6px); } 100% { opacity: 1; transform: translateY(0); } }
+            @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+            @keyframes underline { 0% { stroke-dashoffset: 240; } 100% { stroke-dashoffset: 0; } }
+            @keyframes dot { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+            @keyframes slideLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-960px); } }
+            @keyframes slideRight { 0% { transform: translateX(0); } 100% { transform: translateX(384px); } }
+
+            .f1 { animation: fadeUp 0.6s ease-out 0.1s both; }
+            .f2 { animation: fadeUp 0.6s ease-out 0.3s both; }
+            .f3 { animation: fadeUp 0.6s ease-out 0.5s both; }
+            .strip-top { animation: slideLeft 37.5s linear infinite; transform-origin: 0 0; }
+            .strip-bottom { animation: slideRight 15s linear infinite; transform-origin: 0 0; }
+            .cursor { animation: blink 1s step-end infinite; }
+            .rule { stroke-dasharray: 240; animation: underline 1.2s ease-out 0.2s both; }
+            .d1 { animation: dot 1.6s ease-in-out infinite; }
+            .d2 { animation: dot 1.6s ease-in-out infinite 0.2s; }
+            .d3 { animation: dot 1.6s ease-in-out infinite 0.4s; }
+        </style>
+    </defs>
+
+    <!-- Background -->
+    <rect width="800" height="306" fill="#0d1117"/>
+    <rect x="0.5" y="0.5" width="799" height="305" fill="none" stroke="#21262d" stroke-width="1"/>
+
+    <!-- Top-right status (moved above the strip, clear of it) -->
+    <g class="f1">
+        <circle cx="704" cy="20" r="3" fill="#3fb950" class="d1"/>
+        <circle cx="716" cy="20" r="3" fill="#3fb950" class="d2"/>
+        <circle cx="728" cy="20" r="3" fill="#3fb950" class="d3"/>
+        <text x="740" y="24" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6e7681" text-anchor="start">available</text>
+    </g>
+
+    <!-- Top icon strip -->
+    <defs>
+        <clipPath id="topStripClip"><rect x="40" y="36" width="720" height="32" rx="16"/></clipPath>
+        <clipPath id="bottomStripClip"><rect x="40" y="266" width="720" height="24" rx="12"/></clipPath>
+    </defs>
+    <g clip-path="url(#topStripClip)">
+        <rect x="40" y="36" width="720" height="32" rx="16" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+        <g transform="translate(40,36)">
+        <g class="strip-top">
+            <g transform="translate(0,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#58a6ff" text-anchor="middle">VS Code</text></g>
+            <g transform="translate(96,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#ff7b72" text-anchor="middle">Git</text></g>
+            <g transform="translate(192,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#d2a8ff" text-anchor="middle">GitHub</text></g>
+            <g transform="translate(288,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#7ee787" text-anchor="middle">API</text></g>
+            <g transform="translate(384,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#ffa657" text-anchor="middle">Postman</text></g>
+            <g transform="translate(480,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#6ee7b7" text-anchor="middle">Vercel</text></g>
+            <g transform="translate(576,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#f9d423" text-anchor="middle">Render</text></g>
+            <g transform="translate(672,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#ff6b6b" text-anchor="middle">npm</text></g>
+            <g transform="translate(768,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#4ecdc4" text-anchor="middle">Docker</text></g>
+            <g transform="translate(864,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#ffd166" text-anchor="middle">CLI</text></g>
+            <g transform="translate(960,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#58a6ff" text-anchor="middle">VS Code</text></g>
+            <g transform="translate(1056,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#ff7b72" text-anchor="middle">Git</text></g>
+            <g transform="translate(1152,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#d2a8ff" text-anchor="middle">GitHub</text></g>
+            <g transform="translate(1248,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#7ee787" text-anchor="middle">API</text></g>
+            <g transform="translate(1344,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#ffa657" text-anchor="middle">Postman</text></g>
+            <g transform="translate(1440,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#6ee7b7" text-anchor="middle">Vercel</text></g>
+            <g transform="translate(1536,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#f9d423" text-anchor="middle">Render</text></g>
+            <g transform="translate(1632,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#ff6b6b" text-anchor="middle">npm</text></g>
+            <g transform="translate(1728,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#4ecdc4" text-anchor="middle">Docker</text></g>
+            <g transform="translate(1824,4)"><rect x="0" width="80" height="24" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/><text x="40.0" y="17" font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#ffd166" text-anchor="middle">CLI</text></g>
+        </g>
+        </g>
+    </g>
+
+    <!-- Name -->
+    <text x="40" y="100" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#e6edf3" class="f1">Shubham Idnani</text>
+
+    <!-- Title with typing cursor -->
+    <text x="40" y="126" font-family="monospace" font-size="18" fill="#6997d6" class="f2">MERN Stack Developer<tspan class="cursor" fill="#58a6ff">|</tspan></text>
+
+    <!-- Underline rule -->
+    <line x1="40" y1="139" x2="280" y2="134" stroke="#30363d" stroke-width="1" class="rule"/>
+
+    <!-- Tagline -->
+    <text x="40" y="165" font-family="monospace" font-size="17" font-style='italic' fill="#8b949e" class="f3">Building full-stack web applications with clean, maintainable code</text>
+
+    <!-- Stack row label -->
+    <text x="40" y="196" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11" fill="#6997d6" letter-spacing="0.5" class="f3">STACK</text>
+
+    <!-- MERN badges -->
+    <g class="f3">
+        <rect x="40" y="208" width="96" height="30" rx="15" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+        <circle cx="58" cy="223" r="4" fill="#3fb950"/>
+        <text x="70" y="227" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" fill="#c9d1d9" font-weight="500">MongoDB</text>
+
+        <rect x="152" y="208" width="96" height="30" rx="15" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+        <circle cx="170" cy="223" r="4" fill="#8b949e"/>
+        <text x="182" y="227" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" fill="#c9d1d9" font-weight="500">Express</text>
+
+        <rect x="264" y="208" width="96" height="30" rx="15" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+        <circle cx="282" cy="223" r="4" fill="#58a6ff"/>
+        <text x="294" y="227" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" fill="#c9d1d9" font-weight="500">React</text>
+
+        <rect x="376" y="208" width="96" height="30" rx="15" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+        <circle cx="394" cy="223" r="4" fill="#c40303"/>
+        <text x="406" y="227" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" fill="#c9d1d9" font-weight="500">Node.js</text>
+
+        <rect x="488" y="208" width="96" height="30" rx="15" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+        <circle cx="506" cy="223" r="4" fill="#f89820"/>
+        <text x="518" y="227" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" fill="#c9d1d9" font-weight="500">Java</text>
+    </g>
+
+    <!-- Bottom divider -->
+    <line x1="40" y1="259" x2="760" y2="256" stroke="#21262d" stroke-width="1"/>
+
+    <!-- Footer meta -->
+    <text x="40" y="281" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="10" fill="#6e7681" class="f3">github.com/shubhamiwork27-oss</text>
+    <text x="760" y="281" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" fill="#6997d6" text-anchor="end" class="f3">open to opportunities</text>
+</svg>
